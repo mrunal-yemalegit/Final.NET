@@ -1,0 +1,50 @@
+<div class="searchbar-container">
+  <div class="search-bar">
+    <input
+      type="search"
+      class="form-control rounded mt-4"
+      placeholder="Search"
+      [(ngModel)]="searchQuery"
+      (keyup)="searchStudents()"
+    />
+  </div>
+  <div class="addbutton">
+    <a [routerLink]="'students/add'">
+      <button type="submit" class="btn btn-primary">Add Student</button>
+    </a>
+  </div>
+</div>
+<div class="table-container">
+  <table class="table mt-5" *ngIf="students.length > 0">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Date Of Birth</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">Email</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Address</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let each of filteredStudents; let i = index">
+        <td scope="col">{{ i + 1 }}</td>
+        <td scope="col">{{ each.firstName }}</td>
+        <td scope="col">{{ each.lastName }}</td>
+        <td scope="col">{{ each.dateOfBirth | date : "dd-MM-yyyy" }}</td>
+        <td scope="col">{{ each.mobile }}</td>
+        <td scope="col">{{ each.email }}</td>
+        <td scope="col">{{ each.gender }}</td>
+        <td scope="col">{{ each.address }}</td>
+        <td scope="col">
+          <a [routerLink]="['students', each.id]"
+            ><i class="bi bi-pencil-fill"></i
+          ></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

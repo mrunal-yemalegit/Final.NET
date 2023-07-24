@@ -1,0 +1,48 @@
+.container {
+  margin-top: 3%;
+  margin-left: 20%;
+}
+.v-button {
+  float: left;
+  margin-bottom: 5%;
+}
+.header {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+form {
+  margin-right: 50%;
+  margin-top: 2%;
+}
+button {
+  margin-left: 3px;
+}
+.add-button {
+  float: left;
+  margin-left: 0;
+}
+
+.image {
+  float: right;
+  margin-left: 15%;
+  margin-bottom: 2%;
+}
+.image-container {
+  width: 150px;
+  height: 150px;
+  background-color: azure;
+  border: 2px solid rgb(87, 84, 84);
+  /* border-radius: 50%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 5px;
+  margin-left: 2%;
+  margin-top: 20%;
+}
+
+.change-button{
+  margin-left: 17%;
+}

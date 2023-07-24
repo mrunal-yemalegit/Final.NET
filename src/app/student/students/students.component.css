@@ -1,0 +1,22 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+table {
+  margin-top: 3%;
+  border-radius: 2 solid black;
+}
+
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3%;
+}
+
+.search-bar {
+  float: left;
+  margin-bottom: 2%;
+  margin-top: 3%;
+}
+.addbutton {
+  margin-top: 5.5%;
+  float: right;
+  margin-right: 3%;
+}
